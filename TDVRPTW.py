@@ -1,13 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Dec 25 00:42:38 2022
-
 @author: zahra
 """
-
-
-import sys
-sys.path.append('C:/Users/zahra/Desktop/Thesis/VRP-IoT-TT/code VRP/TDVRPTW')
 
 import random
 import numpy as np 
@@ -16,7 +11,6 @@ import json
 import matplotlib.pyplot as plt
 from scipy.optimize import minimize_scalar
 from random import randrange
-
 
 
 #Loading data from file
@@ -2050,7 +2044,7 @@ if __name__ == "__main__":
         }
         
         # Open the JSON file in read mode
-        with open('C:/Users/zahra/Desktop/Thesis/VRP-IoT-TT/code VRP/DM-TDVRPTW/DM-TDVRPTW/{}_25.json'.format(i), 'r') as f:
+        with open('data/{}_25.json'.format(i), 'r') as f:
             # Load the JSON data into a Python dictionary
             data = json.load(f)
         
