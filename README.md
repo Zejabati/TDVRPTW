@@ -1,7 +1,7 @@
 # TDVRPTW
 
 
-### Time Dependent Vehicle Routing Problem with Time Window _ Hybrid Genetic Algorithm
+### Time Dependent Vehicle Routing Problem with Time Window _ Hybrid Metaheuristic
 
 
 This project presents a Python implementation of a solver designed to address the Time-Dependent Vehicle Routing Problem with Time Windows (TDVRPTW).
