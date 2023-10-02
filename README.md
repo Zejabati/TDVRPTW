@@ -51,7 +51,7 @@ def algorithm(Problem_Genetic, v):
     # ... (Finalize the optimization process and prepare results)
 
     return best_fit_list[-1], best_three_fit, best_q[0]
-
+```
 
 ### Key steps of `algorithm` function
 
@@ -63,10 +63,10 @@ def algorithm(Problem_Genetic, v):
 
 - **Fitness Tracking:** The best fitness value in each iteration is recorded in the `best_fit_list`, allowing you to track the algorithm's progress.
 
-- **Top `q` Solutions Refinement: It prioritizes the three best solutions found in each iteration and applies local search and Large Neighborhood Search (LNS) techniques to enhance their quality, resulting in potential improvements to the solutions.
+- **Top `q` Solutions Refinement:** It prioritizes the three best solutions found in each iteration and applies local search and Large Neighborhood Search (LNS) techniques to enhance their quality, resulting in potential improvements to the solutions.
 
 - **Result Reporting:** It returns key results, including the fitness value of the best solution found, fitness values of the top three solutions, and the best solution among the top `q` solutions.
 
-These key functionalities collectively make up the core of the TDVRPTW solver, enabling it to find
+These key functionalities collectively make up the core of the TDVRPTW solver, enabling it to find high-quality solutions for complex vehicle routing problems with time-dependent constraints.
 
 
