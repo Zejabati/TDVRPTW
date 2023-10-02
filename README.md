@@ -6,7 +6,6 @@
 
 This project presents a Python implementation of a solver designed to address the Time-Dependent Vehicle Routing Problem with Time Windows (TDVRPTW).
 The solver employs a hybrid algorithm that integrates Genetic Algorithms, Local Search, and Large Neighborhood Search techniques. 
-To accommodate time-dependent travel times, the algorithm utilizes a discrete speed function derived from the speed profile described in the research paper 'A Hybrid Algorithm for Time-Dependent Vehicle Routing Problem with Time Windows' authored by Binbin Pan, Zhenzhen Zhang, and Andrew Lim.
 
 ## Key Features
 
@@ -18,7 +17,7 @@ To accommodate time-dependent travel times, the algorithm utilizes a discrete sp
 
 - **Time-Dependent Travel Times:** Travel times between locations are estimated based on a discrete speed function derived from the research paper "A Hybrid Algorithm for Time-Dependent Vehicle Routing Problem with Time Windows" by Binbin Pan, Zhenzhen Zhang, and Andrew Lim.
 
-- **Performance Evaluation:** The solver tracks and reports the best fitness values, solution quality, and execution time.
+- **Performance Evaluation:** The solver tracks and reports the best fitness values, solution (sequence of nodes and departure time from depot for each vehicle), and execution time.
 
 
 ## Data
