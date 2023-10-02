@@ -1,13 +1,13 @@
 # TDVRPTW
 
 
-## Time Dependent Vehicle Routing Problem with Time Window _ Hybrid Genetic Algorithm
+### Time Dependent Vehicle Routing Problem with Time Window _ Hybrid Genetic Algorithm
 
 
 This project presents a Python implementation of a solver designed to address the Time-Dependent Vehicle Routing Problem with Time Windows (TDVRPTW).
 The solver employs a hybrid algorithm that integrates Genetic Algorithms, Local Search, and Large Neighborhood Search techniques. 
 
-## Key Features
+### Key Features
 
 - **Genetic Algorithm (GA):** The solver uses a Genetic Algorithm as the core optimization technique. It iteratively evolves a population of solutions to find better routes.
 
@@ -20,7 +20,7 @@ The solver employs a hybrid algorithm that integrates Genetic Algorithms, Local 
 - **Performance Evaluation:** The solver tracks and reports the best fitness values, solution (sequence of nodes and departure time from depot for each vehicle), and execution time.
 
 
-## Data
+### Data
 This repository includes the Solomon benchmark dataset for TDVRPTW, located in Solomon-TDVRPTW.zip. You can use these data files to test and evaluate the solver's performance.
 
 
