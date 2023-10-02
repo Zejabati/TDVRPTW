@@ -1967,9 +1967,10 @@ def algorithm (Problem_Genetic,v):
     plt.plot(x, best_fit_list[:])
     best_three_fit = [round(i[6],2) for i in best_q]
 
+    
     #bestChromosome = opt(population, key = Problem_Genetic.fitness)
     #print_solution(bestChromosome)
-    return best_fit_list[-1], best_three_fit
+    return best_fit_list[-1], best_three_fit, best_q[0]
 
 
 def VRP(k):
@@ -1993,7 +1994,9 @@ def VRP(k):
         start_time = time.perf_counter()
 
         while cont <= k: 
-            last_fit, best_three =algorithm (VRP_PROBLEM,v)
+            last_fit, best_three, best_solution =algorithm (VRP_PROBLEM,v)
+            print('best_solution',best_solution)
+            
             cont+=1
         #time_final = time()
         end_time = time.perf_counter()
@@ -2001,11 +2004,11 @@ def VRP(k):
         #print("\n") 
         #print("Total time: ",(time_final - time_inicial)," secs.\n")
         print("Total time: ",Total_time," secs.\n")
-        return last_fit, best_three,Total_time
+        return last_fit, best_three,Total_time,best_solution
 
-    last_fit, best_three, Total_time=Run_Algorithms(k)
+    last_fit, best_three, Total_time , best_solution =Run_Algorithms(k)
     print("--------------------------------------------------")
-    return last_fit, best_three,Total_time
+    return last_fit, best_three,Total_time, best_solution
 
 
 #%%
@@ -2020,7 +2023,6 @@ if __name__ == "__main__":
         print('----------------------', i,datetime.datetime.now())
         node_num, nodes, node_dist_mat, vehicle_num, vehicle_capacity = create_from_file ('C:/Users/zahra/Desktop/Thesis/VRP-IoT-TT/VRPTW-ACO-python-master/VRPTW-ACO-python-master/'
                                                                                           'solomon-100/{}.txt'.format(i))
-        
         num_customer= node_num-2
         
         depot_due_time = nodes[0].due_time
@@ -2044,16 +2046,13 @@ if __name__ == "__main__":
         }
         
         # Open the JSON file in read mode
-        with open('data/{}_25.json'.format(i), 'r') as f:
+        with open('C:/Users/zahra/Desktop/Thesis/VRP-IoT-TT/code VRP/DM-TDVRPTW/DM-TDVRPTW/{}_25.json'.format(i), 'r') as f:
             # Load the JSON data into a Python dictionary
             data = json.load(f)
-        
-        
         
         # Constant that is an instance object 
         genetic_problem_instances = 0
         #print("EXECUTING ", genetic_problem_instances+1, " INSTANCES ")
-        last_fit, best_three,Total_time = VRP(genetic_problem_instances)   
-        report.append([i,last_fit, best_three,Total_time])
-
+        last_fit, best_three,Total_time, best_solution = VRP(genetic_problem_instances)   
+        report.append([i,last_fit, best_three,Total_time, best_solution])
 
