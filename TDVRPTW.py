@@ -1896,7 +1896,7 @@ def algorithm (Problem_Genetic,v):
     #parameters
     k = 5
     opt = min
-    ngen = 50
+    n_iter = 50
     size = 10
     ratio_cross = 0.7
     prob_mutate = 0.3
@@ -1913,7 +1913,7 @@ def algorithm (Problem_Genetic,v):
     best_q= population[:q]
 
        
-    for u in range(1,ngen+1):
+    for u in range(1,n_iter+1):
 
         print('----------- iteration', u)
 
