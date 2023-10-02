@@ -10,4 +10,4 @@ To accommodate time-dependent travel times, the algorithm utilizes a discrete sp
 
 Data
 --
-This repository includes the Solomon benchmark dataset for TDVRPTW, located in the data/ directory. You can use these data files to test and evaluate the solver's performance.
+This repository includes the Solomon benchmark dataset for TDVRPTW, located in Solomon-TDVRPTW.zip. You can use these data files to test and evaluate the solver's performance.
